@@ -1,0 +1,39 @@
+.logo img {
+  width: 69px;
+  height: 53px;
+}
+
+.menu_items {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22.99px;
+  letter-spacing: 2px;
+}
+
+.menu_items:hover{
+    color: #BEA741;
+}
+
+.custom-nav-title{
+    font-family: "Lato", system-ui;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle{
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu{
+    --bs-dropdown-min-width: initial;
+}
+
+.dropdown-item{
+    width: 30% ;
+    font-family: "Lato", system-ui;
+    font-size: 12px;
+
+    --bs-dropdown-min-width: initial;
+}
