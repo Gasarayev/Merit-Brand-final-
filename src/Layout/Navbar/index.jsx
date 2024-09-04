@@ -11,31 +11,30 @@ import Logo from "../../assets/img/logoNavbar.png";
 function NavbarMenu() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="pe-2 ps-2">
-      <div href="#home" className="logo logo_desktop">
+      <div className="logo logo_desktop">
         <img src={Logo} alt="logo" />
       </div>
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse
-        
+      <Navbar.Collapse        
         id="responsive-navbar-nav"
       >
         <Container className="mobile_version d-flex justify-content-between align-center">
-          <div href="#home" className="logo logo_mobile">
+          <div className="logo logo_mobile">
             <img src={Logo} alt="logo" />
           </div>
           <Nav className="mobile_menu_list gap-3">
-            <Nav.Link className="menu_items" href="#home">
+            <Nav.Link className="menu_items">
               Home
             </Nav.Link>
-            <Nav.Link className="menu_items" href="#features">
+            <Nav.Link className="menu_items">
               About
             </Nav.Link>
-            <Nav.Link className="menu_items" href="#pricing">
+            <Nav.Link className="menu_items">
               Product
             </Nav.Link>
            
-            <Nav.Link className="menu_items" href="#pricing">
+            <Nav.Link className="menu_items">
               Contact
             </Nav.Link>
 
@@ -44,9 +43,9 @@ function NavbarMenu() {
               title={<span className="custom-nav-title">English</span>}
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="#">Azerbaijan</NavDropdown.Item>
+              <NavDropdown.Item>Azerbaijan</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#">Russian</NavDropdown.Item>
+              <NavDropdown.Item>Russian</NavDropdown.Item>
             </NavDropdown>
            
           </Nav>
@@ -61,10 +60,10 @@ function NavbarMenu() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#">RU</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">
+            <Nav.Link>
               <FaInstagram />
             </Nav.Link>
-            <Nav.Link href="#">
+            <Nav.Link>
               <FaFacebookF />
             </Nav.Link>
           </Nav>

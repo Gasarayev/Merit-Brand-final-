@@ -5,6 +5,11 @@
 .logo img {
   width: 69px;
   height: 53px;
+  cursor: pointer;
+}
+
+.mobile_menu_list{
+  align-items: center;
 }
 
 .menu_items {
@@ -63,7 +68,6 @@
   }
 
   .mobile_menu_list {
-    align-items: center;
     gap: 0 !important;
   }
 
