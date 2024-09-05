@@ -1,0 +1,76 @@
+.vodka_img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #131313;
+}
+
+.vodka_img img{
+    width: 100%;
+}
+
+.vodka_content {
+  min-height: 78vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+  color: #fff;
+}
+
+.vodka_desc {
+  color: #bea741;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26.82px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.vodka_title {
+  font-family: Playfair Display;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 45.32px;
+}
+
+.vodka_text {
+  width: 55%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.vodka_btn {
+  background-color: #bea741;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.4px;
+  letter-spacing: 2px;
+  width: Hug (204.16px) px;
+  height: Hug (49px) px;
+  padding: 17px 61.16px 18px 62px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.vodka_img_wine {
+  justify-content: end;
+}
+
+
+@media (max-width: 991px) {
+    .vodka_content {
+       min-height: 50vh;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vodka_text{
+        width: 90%;
+    }
+
+}
