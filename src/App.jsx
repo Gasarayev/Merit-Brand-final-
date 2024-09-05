@@ -5,6 +5,7 @@ import NavbarMenu from './Layout/Navbar';
 import Header from './Components/Heading';
 import WineSection from './Components/WineSection';
 import VodkaSection from './Components/VodkaSection';
+import AboutSection from './Components/AboutSection';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
      <Header/>
      <WineSection/>
      <VodkaSection/>
+     <AboutSection/>
     </>
   )
 }
