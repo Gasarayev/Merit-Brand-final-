@@ -53,7 +53,7 @@
 .wine_img_second img {
   width: 100%;
   height: 100%;
-  border-radius: 30px 0px 0px 50px;
+  border-radius: 0px 30px 50px 00px;
 }
 
 .wine_content_second {
@@ -66,7 +66,7 @@
   justify-content: center;
   align-items: center;
   gap: 35px;
-  border-radius: 0 30px 80px 0;
+  border-radius: 30px 0px 0px 80px;
 }
 
 .content_icon img {

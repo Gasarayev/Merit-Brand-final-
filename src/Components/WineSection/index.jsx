@@ -21,11 +21,10 @@ function WineSection() {
                 <p className="content_desc">Red Dry Wine</p>
                 <h2 className="content_title">Mirvari</h2>
                 <p className="wine_text">
-                  Made from grape Cabernet Sauvignon & Merlot which is
-                  cultivated in a region of Shabran. Wine is violet-red color
-                  with smooth fruit aroma with notes of black currant.
-                  Recommended to serve red meat, salads & cheese. Flow
-                  temperature 14°-16°
+                  Şabranda becərilən Cabernet Sauvignon & Merlot üzümündən
+                  hazırlanmışdır. Şərab qara qarağat notları ilə hamar meyvə
+                  ətirli bənövşəyi-qırmızı rəngdədir. Qırmızı ət, salat və
+                  pendirə xidmət etmək tövsiyə olunur. Axın temperaturu 14°-16°
                 </p>
                 <p className="wine_text">
                   Made from grape Cabernet Sauvignon & Merlot which is
@@ -38,14 +37,14 @@ function WineSection() {
             </div>
           </div>
 
-          <div className="row mt-5">
-            <div className="col-lg-6 d-flex justify-content-end p-0">
+          <div className="row mt-5 d-flex flex-row-reverse">
+            <div className="col-lg-6 d-flex justify-content-start p-0 mt-5">
               <div className="wine_img_second">
                 <img src={Wine2} alt="merit brand wine" />
               </div>
             </div>
 
-            <div className="col-lg-6 m-0 p-0">
+            <div className="col-lg-6 m-0 p-0 mt-5">
               <div className="wine_content_second">
                 <div className="content_icon">
                   <img src={GrapeIcon} alt="grape icon merit brand" />

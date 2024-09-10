@@ -22,7 +22,7 @@
 }
 
 .vodka_desc {
-  color: #bea741;
+  color: #deb6509c;
   font-size: 14px;
   font-weight: 700;
   line-height: 26.82px;
@@ -35,6 +35,9 @@
   font-size: 34px;
   font-weight: 400;
   line-height: 45.32px;
+  background: linear-gradient(210deg, #f3cc92, #342814);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .vodka_text {
@@ -42,20 +45,24 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
+  background: linear-gradient(90deg, #836b48, #342814);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .vodka_btn {
-  background-color: #bea741;
+  background: linear-gradient(210deg, #f3cc92, #342814);
+  color: #f5deb3;
   font-size: 12px;
   font-weight: 700;
   line-height: 14.4px;
   letter-spacing: 2px;
-  width: Hug (204.16px) px;
-  height: Hug (49px) px;
   padding: 17px 61.16px 18px 62px;
   text-transform: uppercase;
   border: none;
+  border-radius: 5px;
 }
+
 
 .vodka_img_wine {
   justify-content: end;

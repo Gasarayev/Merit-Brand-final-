@@ -1,4 +1,4 @@
-.head_img {
+.meritBrandSlide {
   background-image: url(../../assets/img/heading_bg_img.jpeg);
   background-position: center;
   background-repeat: no-repeat;
@@ -10,15 +10,32 @@
   overflow: hidden;
 }
 
-.head_img::before {
+.meritBrandSlide::before {
   content: "";
   position: absolute;
-  top: 69px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 84.9vh;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
+}
+
+.wineAze{
+  background-image: url(../../assets/img/sliderImg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 84.9vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wineAzeSunshine{
+  background-image: url(../../assets/img/sliderImg2.png);
+
 }
 
 .head_content {
@@ -42,12 +59,40 @@
   font-style: italic;
   font-weight: 400;
   line-height: 48px;
-  width: 60%;
-  /* height: 192px; */
+  width: 45%;
+ 
 }
 
 .content_text h1{
     font-style: italic;
+}
+
+.swiper-button-prev:after{
+  color:#96948C ;
+}
+
+.swiper-button-next:after{
+  color:#96948C ;
+}
+
+.swiper-button-prev {
+  margin-left: 50px;
+}
+
+.swiper-button-next {
+  margin-right: 50px;
+}
+
+
+.swiper-pagination .swiper-pagination-bullet{
+  width: 70px;
+  height: 3px;
+  border-radius: inherit;
+  background-color: #96948C;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active{
+background-color: #96948C;
 }
 
 @media only screen and (max-width: 992px) {
@@ -64,4 +109,13 @@
   .content_text{
     width: 80%;
   }
+
+  .swiper-button-prev:after{
+    color:transparent ;
+  }
+  
+  .swiper-button-next:after{
+    color:transparent ;
+  }
+  
 }
