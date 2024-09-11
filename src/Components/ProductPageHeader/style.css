@@ -1,0 +1,8 @@
+.bgPichead{
+    background-image: url(../../assets/img/Container.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:30.4vh;
+    width: 100%;
+  }

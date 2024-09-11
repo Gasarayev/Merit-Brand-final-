@@ -106,6 +106,7 @@
   .wine_img,
   .wine_img_second {
     height: auto;
+    width: inherit;
   }
 
   .wine_img_second img {

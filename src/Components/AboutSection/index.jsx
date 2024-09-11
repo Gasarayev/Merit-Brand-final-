@@ -1,9 +1,8 @@
 import React from "react";
-import VodkaProsses from '../../assets/img/vodka_prosses.png'
-import WineProsses from '../../assets/img/wine_prosses.png'
+import VodkaProsses from "../../assets/img/vodka_prosses.png";
+import WineProsses from "../../assets/img/wine_prosses.png";
 
-import '../AboutSection/style.css'
-
+import "../AboutSection/style.css";
 
 function AboutSection() {
   return (
@@ -18,16 +17,16 @@ function AboutSection() {
             </div>
             <div className="col-lg-6 m-0 p-0">
               <div className="vodka_content about_sect_content">
-                <p className="vodka_desc">About us</p>
+      
                 <h2 className="vodka_title_abt">How we Started</h2>
-                <p className="vodka_text"> 
-                  “Merit Brand” zavodu, 2007-ci ildə Azərbaycan Respublikasının
-                  Şabran qəsəbəsi, Böyük Qafqaz dağlarının ətəyində və Xəzər
-                  dənizinin sahilində yerləşən Uzun Boyat kəndinin ərazisində
-                  aradılıb. Onun məskunlaşdığı yer təsadüfi seçilməmişdi çunki
-                  təbiət bu bölgəyə şərabçılıq ilə məşğul olmaq üçün məhsuldar
-                  torpaq və çox əlverişli iqlim şəraiti kimi tohvələr bəxş
-                  etmişdi.
+                <p className="vodka_text">
+                  Merit Brand plant, Republic of Azerbaijan in 2007Shabran
+                  settlement, at the foot of the Great Caucasus Mountains and
+                  the Caspian Seain the territory of the village of Uzun Boyat,
+                  located on the coast of the seasearched. Because his place of
+                  residence was not chosen by chancenature is fertile for
+                  winemaking in this regionsoil and very favorable climatic
+                  conditions like seedshad done
                 </p>
               </div>
             </div>
@@ -41,13 +40,19 @@ function AboutSection() {
             </div>
             <div className="col-lg-6 m-0 p-0">
               <div className="vodka_content about_sect_content">
-                <p className="vodka_desc">About us</p>
+
                 <h2 className="vodka_title_abt">Passion & Craftmanship</h2>
                 <p className="vodka_text">
-                  400 meter high above sea level, mostily chalksoils, more than
-                  2000 hours of sunlight and less than 300mm of the
-                  precipitation a year create ideal conditions for growing
-                  grapes.
+                  Our plant also produces vodka. This in order to be the most
+                  technologically advanced in the plant area a special building
+                  equipped with advanced equipment is allocated. Invited from
+                  Ukraine and Kabardino-Balkaria to extensive experience All the
+                  production that goes on here are experts control their
+                  processes. The basis of the recipes only raw materials of
+                  natural origin. Use in production The waters of the
+                  mountainous sources are unique and useful has features. The
+                  filtration process is almost vodka as it is used at every
+                  stage of production, here can be considered the most basic
                 </p>
               </div>
             </div>

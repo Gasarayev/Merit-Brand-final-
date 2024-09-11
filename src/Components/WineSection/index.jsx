@@ -52,12 +52,12 @@ function WineSection() {
 
                 <p className="content_desc_second">Red Dry Wine</p>
                 <p className="content_text_second">
-                  Bu günə, ümumi sahəsi 150 hektardan çox olan üzüm bağlarımızda
-                  Cabernet Sauvignon, Pinot Noir, Merlot, Pinot Meunier,
-                  Chardonnay, Madrasa və Takveri kimi müxtəlif üzüm növləri
-                  yetişdirilir, və bütün bunlar müxtəlif şərablarların
-                  hazırlanması və maraqlı qarışıqların yaranması üçün gözəl bir
-                  fürsət yaradır
+                  Today, in our vineyards with a total area of over 150
+                  hectares, we grow various grape varieties such as Cabernet
+                  Sauvignon, Pinot Noir, Merlot, Pinot Meunier, Chardonnay,
+                  Madrasa, and Takveri. All of this provides a great opportunity
+                  for the production of different wines and the creation of
+                  interesting blends.
                 </p>
               </div>
             </div>

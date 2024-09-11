@@ -1,0 +1,41 @@
+.bgImg_aboutHead {
+  background-image: url(../../assets/img/aboutHEADER.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:30.4vh;
+  width: 100%;
+}
+
+.content_aboutHeading{
+    margin: 50px 0;
+    text-align: center;
+}
+.content_abt_heading{
+    color: #deb6509c;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26.82px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.content_title_aboutHeading{
+    font-family: Playfair Display;
+    font-size: 41px;
+    font-weight: 500;
+    line-height: 54.65px;
+    background: linear-gradient(-90deg, #ceac7a, #342814);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.content_text_aboutHeading{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    background: linear-gradient(90deg, #836b48, #342814);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+}

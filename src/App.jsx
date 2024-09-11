@@ -1,29 +1,25 @@
-
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarMenu from './Layout/Navbar';
-import Header from './Components/Heading';
-import WineSection from './Components/WineSection';
-import VodkaSection from './Components/VodkaSection';
-import AboutSection from './Components/AboutSection';
-import Contact from './Components/Contact';
-import Footer from './Layout/Footer';
-
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+// import store from "./redux/store.js";
+import HomePage from "./Pages/HomePage/index.jsx";
+import AboutPage from "./Pages/AboutPage/index.jsx";
+import store from "./redux/store.js";
+import ProductPage from "./Pages/ProductPage/index.jsx";
 
 function App() {
-
-
   return (
-    <>
-     <NavbarMenu/>
-     <Header/>
-     <WineSection/>
-     <VodkaSection/>
-     <AboutSection/>
-     <Contact/>
-     <Footer/>
-    </>
-  )
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-merit-brand" element={<AboutPage />} />
+          <Route path="/product-merit-brand" element={<ProductPage />} />
+        </Routes>
+      </Router>
+    </Provider>
+  );
 }
 
-export default App
+export default App;

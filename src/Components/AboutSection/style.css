@@ -6,14 +6,14 @@
   background-color: #131313;
   min-height: auto;
   height: 100%;
-  width: 100%;
+  width: 100% !important;
 }
 .about_section .about_sect_content .vodka_title_abt {
   font-family: Playfair Display;
   font-size: 41px;
   font-weight: 400;
   line-height: 54.65px;
-  background: linear-gradient(210deg, #f3cc92, #342814);
+  background: linear-gradient(-90deg, #ceac7a, #342814);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
