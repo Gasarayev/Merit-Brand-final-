@@ -7,6 +7,7 @@ import ProductDetails from "./Pages/Client/ProductDetal/index.jsx";
 import ProductPage from "./Pages/Client/ProductPage/index.jsx";
 import AboutPage from "./Pages/Client/AboutPage/index.jsx";
 import HomePage from "./Pages/Client/HomePage/index.jsx";
+import LoginPage from "./Pages/Admin/LoginPage/index.jsx";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
           <Route path="/about-merit-brand" element={<AboutPage />} />
           <Route path="/product-merit-brand" element={<ProductPage />} />
           <Route path="/product-details/:id" element={<ProductDetails />} />
+
+          <Route path="/admin/login" element={<LoginPage />} />
         </Routes>
       </Router>
     </Provider>
