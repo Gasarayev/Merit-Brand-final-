@@ -38,7 +38,7 @@ function NavbarMenu() {
             <Nav.Link as={Link} to="/about-merit-brand" className="menu_items">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="/product-merit-brand" className="menu_items">Product</Nav.Link>
+            <Nav.Link as={Link} to="/product" className="menu_items">Product</Nav.Link>
 
             <Nav.Link className="menu_items">Contact</Nav.Link>
 

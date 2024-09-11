@@ -1,3 +1,13 @@
+.our_items{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.our_items h1{
+  font-size: 700;
+  font-size: 48px;
+}
+
 .items_category {
   margin: 50px 0;
   display: flex;
@@ -63,6 +73,7 @@
   line-height: 26.66px;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
 
 }
 
@@ -71,5 +82,4 @@
   font-weight: 400;
   line-height: 21.33px;
   color: #BEA741;
-
 }
