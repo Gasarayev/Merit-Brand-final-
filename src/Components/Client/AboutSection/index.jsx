@@ -1,6 +1,6 @@
 import React from "react";
-import VodkaProsses from "../../assets/img/vodka_prosses.png";
-import WineProsses from "../../assets/img/wine_prosses.png";
+import VodkaProsses from "../../../assets/img/vodka_prosses.png";
+import WineProsses from "../../../assets/img/wine_prosses.png";
 
 import "../AboutSection/style.css";
 

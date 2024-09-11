@@ -1,7 +1,7 @@
 import React from "react";
 import "../VodkaSection/style.css";
-import Vodka from "../../assets/img/vodka.png";
-import WineVodka from "../../assets/img/vodka_wine.png";
+import Vodka from "../../../assets/img/vodka.png";
+import WineVodka from "../../../assets/img/vodka_wine.png";
 
 function VodkaSection() {
   return (

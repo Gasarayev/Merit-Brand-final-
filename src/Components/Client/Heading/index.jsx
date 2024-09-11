@@ -1,6 +1,6 @@
 import React from "react";
 import "../Heading/style.css";
-import Logo from "../../assets/img/logoNavbar.png";
+import Logo from "../../../assets/img/logoNavbar.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation"; 

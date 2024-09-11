@@ -1,5 +1,5 @@
 .meritBrandSlide {
-  background-image: url(../../assets/img/heading_bg_img.jpeg);
+  background-image: url(../../../assets/img/heading_bg_img.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@
 }
 
 .wineAze{
-  background-image: url(../../assets/img/sliderImg.jpg);
+  background-image: url(../../../assets/img/sliderImg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,7 @@
 }
 
 .wineAzeSunshine{
-  background-image: url(../../assets/img/sliderImg2.png);
+  background-image: url(../../../assets/img/sliderImg2.png);
 
 }
 

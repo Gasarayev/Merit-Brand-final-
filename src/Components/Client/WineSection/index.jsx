@@ -1,7 +1,7 @@
 import React from "react";
-import Wine1 from "../../assets/img/wine1.png";
-import Wine2 from "../../assets/img/wine2.png";
-import GrapeIcon from "../../assets/img/wineGrapeIcon.png";
+import Wine1 from "../../../assets/img/wine1.png";
+import Wine2 from "../../../assets/img/wine2.png";
+import GrapeIcon from "../../../assets/img/wineGrapeIcon.png";
 import "../WineSection/style.css";
 
 function WineSection() {

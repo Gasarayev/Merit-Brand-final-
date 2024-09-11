@@ -1,6 +1,7 @@
 import React from "react";
 import "../ProductItems/style.css";
-import ProductImg from "../../assets/img/productImg.png";
+import ProductImg from "../../../assets/img/productImg.png";
+import { Link } from "react-router-dom";
 
 function ProductItem() {
   return (
@@ -36,7 +37,10 @@ function ProductItem() {
                 </div>
                 <div className="product_info">
                   <p className="product_company">merit brand</p>
-                  <p className="product_name">Mirvari</p>
+                  <Link to={`/product-details/1`} className="product_name">
+                    
+                    Mirvari
+                  </Link>
                   <p className="product_sort">Red Dry Wine</p>
                 </div>
               </div>
@@ -52,7 +56,6 @@ function ProductItem() {
                 </div>
               </div>
 
-
               <div className="product_card">
                 <div className="product_img">
                   <img src={ProductImg} alt="merit-brand-product" />
@@ -73,7 +76,6 @@ function ProductItem() {
                   <p className="product_sort">Red Dry Wine</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
