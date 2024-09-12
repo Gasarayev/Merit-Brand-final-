@@ -6,8 +6,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import "../Navbar/style.css";
-import Logo from "../../assets/img/logoNavbar.png";
-import AboutPage from "../../Pages/Client/AboutPage";
+import Logo from "../../../assets/img/logoNavbar.png";
+// import AboutPage from "../../Pages/Client/AboutPage";
 import { Link } from "react-router-dom";
 
 function NavbarMenu() {

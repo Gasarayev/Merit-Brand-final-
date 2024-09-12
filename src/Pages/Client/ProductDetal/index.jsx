@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import ProductDetailsInfo from "../../../Components/Client/ProductDeatilsInfo";
-import Footer from "../../../Layout/Footer";
-import NavbarMenu from "../../../Layout/Navbar";
+import Footer from "../../../Layout/Client/Footer";
+import NavbarMenu from "../../../Layout/Client/Navbar";
 import { Helmet } from "react-helmet";
 
 function ProductDetails() {

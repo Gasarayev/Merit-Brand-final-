@@ -1,10 +1,10 @@
 import React from "react";
-import NavbarMenu from "../../../Layout/Navbar";
+import NavbarMenu from "../../../Layout/Client/Navbar";
 import Header from "../../../Components/Client/Heading";
 import WineSection from "../../../Components/Client/WineSection";
 import VodkaSection from "../../../Components/Client/VodkaSection";
 import Contact from "../../../Components/Client/Contact";
-import Footer from "../../../Layout/Footer";
+import Footer from "../../../Layout/Client/Footer";
 import { Helmet } from "react-helmet";
 import LogoBrowser from "../../../assets/img/logoNavbar.png"
 

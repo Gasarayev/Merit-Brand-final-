@@ -1,9 +1,9 @@
 import React from "react";
-import NavbarMenu from "../../../Layout/Navbar";
+import NavbarMenu from "../../../Layout/Client/Navbar";
 import AboutPageHeader from "../../../Components/Client/AboutPageHeader";
 import AboutSection from "../../../Components/Client/AboutSection";
 import Contact from "../../../Components/Client/Contact";
-import Footer from "../../../Layout/Footer";
+import Footer from "../../../Layout/Client/Footer";
 import { Helmet } from "react-helmet";
 
 function AboutPage() {

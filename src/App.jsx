@@ -22,7 +22,7 @@ function App() {
           <Route path="/product-details/:id" element={<ProductDetails />} />
 
           <Route
-            path="/admin/dashboard"
+            path="/admin/dashboard/*"
             element={
               <PrivateRouter>
                 <Dashboard />
