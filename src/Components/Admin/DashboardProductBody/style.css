@@ -1,6 +1,132 @@
-.product_table{
-    background-color: #dddddd;
-    width: 100%;
-    height: 100vh;
-    border-left: 1px solid #000;
+/* alert */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #816a47;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: #0F282E;
+  color: #A3D5E1;
+  box-shadow: 0px 0px 15px #A3D5E1;
+}
+
+.close {
+  width: 25px;
+  font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(248, 56, 56);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* product & table */
+
+.productBody {
+  background-color: #f0f8fa;
+  /* height: 100vh; */
+  min-height: 100%;
+}
+
+.form_border_product {
+  border-left: 1px solid #000;
+}
+
+.product_table {
+  width: 80%;
+  margin-top: 50px;
+}
+
+.table {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.table thead {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  th {
+    color: #0f282e;
+  }
+}
+
+.table tbody {
+  vertical-align: middle;
+  text-align: center;
+  td {
+    color: #0f282e;
+  }
+}
+
+.product_table {
+  min-height: 100vh;
+}
+
+.btn_product_ctgry {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn_product {
+  width: 40px;
+  height: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 0.6s;
+}
+
+.btn_product_remove {
+  background-color: rgb(255, 33, 33);
+}
+
+.btn_product_remove:hover {
+  background-color: rgba(255, 0, 0, 0.249);
+  color: red;
+}
+
+.btn_product_edit {
+  background-color: orange;
+}
+
+.btn_product_edit:hover {
+  background-color: rgba(255, 166, 0, 0.249);
+  color: rgb(194, 127, 1);
+}
+
+/* product form */
+
+.product_form {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.product_form form {
+  padding: 10px;
+  background-color: #d1e9f0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.product_form form button {
+  background-color: #0a1b1f;
 }

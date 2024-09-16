@@ -17,7 +17,7 @@ function Dashboard() {
           <div className="col-2 p-0">
             <DashboardSidebar />
           </div>
-          <div className="col-10 p-0">
+          <div className="col-10 p-0 dashboard_body_content">
             <Routes>
               <Route path="product" element={<DashboardProductBody />} />
               <Route path="category" element={<DashboardCategory />} />

@@ -34,7 +34,7 @@ function Login() {
     if (email === adminEmail) {
       if (password === adminPassword) {
         localStorage.setItem("adminPassword", password);
-        navigate("/admin/dashboard");
+        navigate("/admin/dashboard/product");
       } else {
         showCustomAlert();
       }
@@ -45,9 +45,9 @@ function Login() {
 
   return (
     <>
-      <div id="customAlert" class="modal">
-        <div class="modal-content">
-          <span class="close">
+      <div id="customAlert" className="modal">
+        <div className="modal-content">
+          <span className="close">
             <IoIosCloseCircle />
           </span>
           <p>Email or Password is not correct!</p>
