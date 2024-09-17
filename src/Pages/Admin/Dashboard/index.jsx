@@ -1,10 +1,11 @@
 import React from "react";
 import DashboardSidebar from "../../../Components/Admin/DashboardSidebar";
-import DashboardProductBody from "../../../Components/Admin/DashboardProductBody";
+import DashboardProductBody from "../../../Components/Admin/DashboardSidebar/DashboardProductBody";
 import { Route, Routes } from "react-router-dom";
-import DashboardCategory from "../../../Components/Admin/DashboardCategory";
+import DashboardCategory from "../../../Components/Admin/DashboardSidebar/DashboardCategory";
 import Logo from "../../../assets/img/logoNavbar.png";
 import "../../../Components/Admin/DashboardSidebar/style.css";
+import About from "../../../Components/Admin/DashboardSidebar/About";
 
 function Dashboard() {
   return (
@@ -21,6 +22,9 @@ function Dashboard() {
             <Routes>
               <Route path="product" element={<DashboardProductBody />} />
               <Route path="category" element={<DashboardCategory />} />
+              <Route path="about" element={<About />} />
+
+              
             </Routes>
           </div>
         </div>

@@ -19,6 +19,21 @@ function DashboradSidebar() {
                     <p>Category</p>
                   </Link>
                 </div>
+                <div className="sidebar_category">
+                  <Link to="/admin/dashboard/about">
+                    <p>About</p>
+                  </Link>
+                </div>
+                <div className="sidebar_category">
+                  <Link to="/admin/dashboard/#">
+                    <p>Contact</p>
+                  </Link>
+                </div>
+                <div className="sidebar_category">
+                  <Link to="/admin/dashboard/#">
+                    <p>Slider</p>
+                  </Link>
+                </div>
               </div>
             </div>
        
