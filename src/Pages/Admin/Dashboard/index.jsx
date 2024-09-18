@@ -7,6 +7,7 @@ import Logo from "../../../assets/img/logoNavbar.png";
 import "../../../Components/Admin/DashboardSidebar/style.css";
 import About from "../../../Components/Admin/DashboardSidebar/About";
 import Contact from "../../../Components/Admin/DashboardSidebar/Contact";
+import DashboardSlider from "../../../Components/Admin/DashboardSidebar/Slider";
 
 function Dashboard() {
   return (
@@ -25,6 +26,7 @@ function Dashboard() {
               <Route path="category" element={<DashboardCategory />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="slider" element={<DashboardSlider />} />
             </Routes>
           </div>
         </div>
