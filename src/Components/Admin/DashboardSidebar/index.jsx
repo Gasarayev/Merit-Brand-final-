@@ -25,7 +25,7 @@ function DashboradSidebar() {
                   </Link>
                 </div>
                 <div className="sidebar_category">
-                  <Link to="/admin/dashboard/#">
+                  <Link to="/admin/dashboard/contact">
                     <p>Contact</p>
                   </Link>
                 </div>

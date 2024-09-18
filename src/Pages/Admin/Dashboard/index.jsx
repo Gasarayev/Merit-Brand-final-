@@ -6,12 +6,13 @@ import DashboardCategory from "../../../Components/Admin/DashboardSidebar/Dashbo
 import Logo from "../../../assets/img/logoNavbar.png";
 import "../../../Components/Admin/DashboardSidebar/style.css";
 import About from "../../../Components/Admin/DashboardSidebar/About";
+import Contact from "../../../Components/Admin/DashboardSidebar/Contact";
 
 function Dashboard() {
   return (
     <>
       <div className="container-fluid">
-        <div className="row dashboardSidebar" >
+        <div className="row dashboardSidebar">
           <div className="admin_logo">
             <img src={Logo} alt="" />
           </div>
@@ -23,8 +24,7 @@ function Dashboard() {
               <Route path="product" element={<DashboardProductBody />} />
               <Route path="category" element={<DashboardCategory />} />
               <Route path="about" element={<About />} />
-
-              
+              <Route path="contact" element={<Contact />} />
             </Routes>
           </div>
         </div>
