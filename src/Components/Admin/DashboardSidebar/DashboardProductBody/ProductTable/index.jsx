@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 import { FaRegEdit } from "react-icons/fa";
 import { IoTrashOutline } from "react-icons/io5";
+import { useGetProductsQuery } from "../../../../../api/ProductsApi";
 
-function ProductTable({ product = [] }) {
+function ProductTable() {
+
+  const {data} = useGetProductsQuery();
+  
   return (
     <>
       <Table bordered hover>
@@ -18,23 +22,24 @@ function ProductTable({ product = [] }) {
           </tr>
         </thead>
         <tbody>
-          {product.map((products, index) => {
+
+          {data?.map((products, index) => {
             return (
               <tr key={index}>
-                <td>{products.id}</td>
-                <td>{products.name}</td>
+                <td>{products?.id}</td>
+                <td>{products?.name}</td>
                 <td>
-                  {products.image !== "No img" ? (
+                  {products?.image !== "No img" ? (
                     <img
-                      src={products.image}
-                      alt={products.name}
+                      src={products?.image}
+                      alt={products?.name}
                       style={{ width: "100px", height: "100px" }}
                     />
                   ) : (
                     "No img"
                   )}
                 </td>
-                <td>{products.desc}</td>
+                <td>{products?.text}</td>
                 <td className="align-middle text-center">
                   <div className="btn_product_ctgry">
                     <button className="btn_product btn_product_edit">

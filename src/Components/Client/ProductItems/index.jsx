@@ -1,9 +1,13 @@
 import React from "react";
-import "../ProductItems/style.css";
 import ProductImg from "../../../assets/img/productImg.png";
 import { Link } from "react-router-dom";
+import { useGetProductsQuery } from "../../../api/ProductsApi";
+import "../ProductItems/style.css";
 
 function ProductItem() {
+  const { data } = useGetProductsQuery();
+  console.log(data);
+
   return (
     <>
       <section>
@@ -23,74 +27,26 @@ function ProductItem() {
 
           <div className="row">
             <div className="product_list">
-              <div className="product_card">
-                <div className="product_img">
-                  <img src={ProductImg} alt="merit-brand-product" />
-                </div>
-                <div className="product_info">
-                  <p className="product_company">merit brand</p>
-                  <Link to={`/product-details/1`} className="product_name">
-                    <h2> Mirvari </h2>
-                    
-                  </Link>
-                  <h3 className="product_sort">Red Dry Wine</h3>
-                </div>
-              </div>
+              {data?.map((item, i) => {
 
-              <div className="product_card">
-                <div className="product_img">
-                  <img src={ProductImg} alt="merit-brand-product" />
-                </div>
-                <div className="product_info">
-                  <p className="product_company">merit brand</p>
-                  <Link to={`/product-details/1`} className="product_name">
-                    <h2> Mirvari </h2>
-                    
-                  </Link>
-                  <h3 className="product_sort">Red Dry Wine</h3>
-                </div>
-              </div>
+              return(  <div key={i} className="product_card">
+                  <div className="product_img">
 
-              <div className="product_card">
-                <div className="product_img">
-                  <img src={ProductImg} alt="merit-brand-product" />
-                </div>
-                <div className="product_info">
-                  <p className="product_company">merit brand</p>
-                  <Link to={`/product-details/1`} className="product_name">
-                    <h2> Mirvari </h2>
-                    
-                  </Link>
-                  <h3 className="product_sort">Red Dry Wine</h3>
-                </div>
-              </div>
+                    <img src={ProductImg} alt="merit-brand-product" />
 
-              <div className="product_card">
-                <div className="product_img">
-                  <img src={ProductImg} alt="merit-brand-product" />
+                  </div>
+                  <div className="product_info">
+                    <p className="product_company">{item?.brand}</p>
+                    <Link  className="product_name">
+                      <h2> {item?.name} </h2>
+                    </Link>
+                    <h3 className="product_sort">{item?.name1}</h3>
+                  </div>
+
                 </div>
-                <div className="product_info">
-                  <p className="product_company">merit brand</p>
-                  <Link to={`/product-details/1`} className="product_name">
-                    <h2> Mirvari </h2>
-                    
-                  </Link>
-                  <h3 className="product_sort">Red Dry Wine</h3>
-                </div>
-              </div>
-              <div className="product_card">
-                <div className="product_img">
-                  <img src={ProductImg} alt="merit-brand-product" />
-                </div>
-                <div className="product_info">
-                  <p className="product_company">merit brand</p>
-                  <Link to={`/product-details/1`} className="product_name">
-                    <h2> Mirvari </h2>
-                    
-                  </Link>
-                  <h3 className="product_sort">Red Dry Wine</h3>
-                </div>
-              </div>
+              )
+              })}
+         
             </div>
           </div>
         </div>
