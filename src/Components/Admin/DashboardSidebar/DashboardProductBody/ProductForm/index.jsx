@@ -5,14 +5,16 @@ import { useAddProductsMutation } from "../../../../../api/ProductsApi";
 import { IoIosCloseCircle } from "react-icons/io";
 
 function ProductForm() {
+
   const [addData] = useAddProductsMutation();
+  
 
   const [name, setName] = useState("");
   const [image, setImage] = useState(null);
   const [text, setText] = useState("");
  
 
-  
+
   const showCustomAler = () => {
     const modal = document.getElementById("customAlertForm");
     const closeBtn = document.getElementsByClassName("close")[0];
@@ -53,6 +55,8 @@ function ProductForm() {
     }
     
   };
+
+
 
   return (
     <>
