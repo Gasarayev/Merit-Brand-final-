@@ -40,7 +40,7 @@ function NavbarMenu() {
             </Nav.Link>
             <Nav.Link as={Link} to="/product" className="menu_items">Product</Nav.Link>
 
-            <Nav.Link className="menu_items">Contact</Nav.Link>
+            <Nav.Link as={Link} to={"/contact-us"} className="menu_items">Contact</Nav.Link>
 
             <NavDropdown
               className="lang_mobile"
