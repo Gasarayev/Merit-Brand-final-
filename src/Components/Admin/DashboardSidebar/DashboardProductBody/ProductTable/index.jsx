@@ -4,15 +4,18 @@ import { FaRegEdit } from "react-icons/fa";
 import { IoTrashOutline } from "react-icons/io5";
 import {
   useDeleteProductsMutation,
+  useEditProductsMutation,
   useGetProductsQuery,
 } from "../../../../../api/ProductsApi";
 import { IoIosCloseCircle } from "react-icons/io";
-import "../ProductTable/style.css"
+import "../ProductTable/style.css";
 
 function ProductTable() {
   const { data } = useGetProductsQuery();
 
   const [removeData] = useDeleteProductsMutation();
+
+  // const [editData] = useEditProductsMutation();
 
   const deleteshowCustomAlert = () => {
     const modal = document.getElementById("customAlertdelete");
@@ -34,7 +37,7 @@ function ProductTable() {
   const deleteData = async (productId) => {
     try {
       const response = await removeData(productId).unwrap();
-      deleteshowCustomAlert()
+      deleteshowCustomAlert();
       console.log("delete");
     } catch (err) {
       console.log("silinmedi");
@@ -60,6 +63,7 @@ function ProductTable() {
             <th>Product Name</th>
             <th>Product Image</th>
             <th>Product Description</th>
+            <th>Category</th>
             <th>Edit</th>
             <th>Remove</th>
           </tr>
@@ -82,6 +86,7 @@ function ProductTable() {
                   )}
                 </td>
                 <td>{products?.text}</td>
+                <td>{products?.category}</td>
                 <td className="align-middle text-center">
                   <div className="btn_product_ctgry">
                     <button className="btn_product btn_product_edit">

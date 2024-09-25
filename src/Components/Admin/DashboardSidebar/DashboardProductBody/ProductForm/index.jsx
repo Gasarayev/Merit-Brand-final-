@@ -5,18 +5,32 @@ import { useAddProductsMutation } from "../../../../../api/ProductsApi";
 import { IoIosCloseCircle } from "react-icons/io";
 
 function ProductForm() {
-
   const [addData] = useAddProductsMutation();
-  
 
   const [name, setName] = useState("");
   const [image, setImage] = useState(null);
   const [text, setText] = useState("");
- 
-
+  const [category, setCategory] = useState("");
 
   const showCustomAler = () => {
     const modal = document.getElementById("customAlertForm");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "block";
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  };
+
+  const showCustomAlertEmptyInp = () => {
+    const modal = document.getElementById("customAlertFormEmptyInp");
     const closeBtn = document.getElementsByClassName("close")[0];
 
     modal.style.display = "block";
@@ -39,24 +53,32 @@ function ProductForm() {
       name,
       image,
       text,
+      category,
     };
 
     try {
-      const response = await addData(addProductData).unwrap();
-      console.log("Response from addData:", response);
-      showCustomAler();
+      if (
+        addProductData.name &&
+        addProductData.image &&
+        addProductData.text &&
+        addProductData.category
+      ) {
+        const response = await addData(addProductData).unwrap();
+        console.log("Response from addData:", response);
+        showCustomAler();
+      } else {
+        showCustomAlertEmptyInp();
+      }
 
       setName("");
       setImage(null);
       setText("");
+      setCategory("");
     } catch (err) {
       console.error("Error: ", err);
       alert("error");
     }
-    
   };
-
-
 
   return (
     <>
@@ -66,6 +88,15 @@ function ProductForm() {
             <IoIosCloseCircle />
           </span>
           <p>Data add successfully</p>
+        </div>
+      </div>
+
+      <div id="customAlertFormEmptyInp" className="modal">
+        <div className="modal-content bg-danger">
+          <span className="close">
+            <IoIosCloseCircle />
+          </span>
+          <p>Empty Input</p>
         </div>
       </div>
       <Form onSubmit={addProduct}>
@@ -95,6 +126,20 @@ function ProductForm() {
             onChange={(e) => setText(e.target.value)}
           />
         </Form.Group>
+
+        <Form.Select
+          onChange={(e) => setCategory(e.target.value)}
+          value={category}
+          className="mb-3"
+          aria-label="Default select example"
+        >
+          <option>Select category ...</option>
+          <option>All</option>
+          <option value="Wine">Wine</option>
+          <option value="Vodka">Vodka</option>
+          <option value="Congac">Congac</option>
+          <option value="Rum">Rum</option>
+        </Form.Select>
 
         <Button type="submit">Add Product</Button>
       </Form>
