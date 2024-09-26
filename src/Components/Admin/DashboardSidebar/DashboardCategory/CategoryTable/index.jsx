@@ -11,7 +11,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 
 function CategoryTable() {
   const { data } = useGetCategoryQuery();
-  console.log(data);
+  // console.log(data);
 
   const [removeCategory] = useDeleteCategoryMutation();
 
@@ -36,9 +36,11 @@ function CategoryTable() {
     try {
       const response = await removeCategory(categoryId).unwrap();
       deleteshowCustomAlert();
-      console.log("delete category");
+      // console.log("delete category");
+
+      console.log("delete category id" ,categoryId)
     } catch (err) {
-      console.log(err, "category silinmede xeta bash verdi");
+      // console.log(err, "category silinmede xeta bash verdi");
       alert("error! category silinmedi");
     }
   };

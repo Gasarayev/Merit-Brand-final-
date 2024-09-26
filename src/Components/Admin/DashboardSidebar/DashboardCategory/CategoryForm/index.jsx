@@ -49,16 +49,17 @@ function CategoryForm() {
   const addCategory = async (e) =>{
     e.preventDefault();
 
-    const randomId = Math.floor(Math.random() * 100);
+    // const randomId = Math.floor(Math.random() * 100);
     const addData = {
-      id: randomId,
+      // id: randomId,
       category,
     };
-
     try{
       if( addData.category){
           const response = await addCategoryData(addData).unwrap();
-          console.log("response from addCategory", response);
+          // console.log("response from addCategory", response);
+          console.log("form id ",addData.id)
+
           showCustomAler();
       }else{
         showCustomAlertEmptyInp();
@@ -67,7 +68,7 @@ function CategoryForm() {
 
       setCategory("");
     }catch(err){
-      console.log(err, "add category xeta bash verdi")
+      // console.log(err, "add category xeta bash verdi")
       alert("add category xeta bash verdi")
     }
   }
