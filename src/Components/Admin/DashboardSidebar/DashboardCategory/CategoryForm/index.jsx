@@ -44,10 +44,14 @@ function CategoryForm() {
     };
   };
 
+
+  
   const addCategory = async (e) =>{
     e.preventDefault();
 
+    const randomId = Math.floor(Math.random() * 100);
     const addData = {
+      id: randomId,
       category,
     };
 

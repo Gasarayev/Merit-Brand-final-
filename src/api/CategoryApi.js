@@ -37,7 +37,7 @@ export const CategoryApi = baseQuery.injectEndpoints({
         headers: {
           "Content-Type": "application/json",
         },
-        body: student,
+        body: categories,
       }),
       invalidatesTags: ["Category"],
     }),

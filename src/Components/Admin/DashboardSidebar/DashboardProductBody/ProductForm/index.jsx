@@ -49,10 +49,15 @@ function ProductForm() {
     };
   };
 
+  
+
   const addProduct = async (e) => {
     e.preventDefault();
 
+    const randomId = Math.floor(Math.random() * 100);
+
     const addProductData = {
+      id: randomId,
       name,
       image,
       text,
