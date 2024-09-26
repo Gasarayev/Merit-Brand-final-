@@ -3,9 +3,12 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useAddProductsMutation } from "../../../../../api/ProductsApi";
 import { IoIosCloseCircle } from "react-icons/io";
+import { useGetCategoryQuery } from "../../../../../api/CategoryApi";
 
 function ProductForm() {
   const [addData] = useAddProductsMutation();
+  const { data: categoryData } = useGetCategoryQuery();
+  console.log(categoryData);
 
   const [name, setName] = useState("");
   const [image, setImage] = useState(null);
@@ -87,7 +90,7 @@ function ProductForm() {
           <span className="close">
             <IoIosCloseCircle />
           </span>
-          <p>Data add successfully</p>
+          <p>Data added successfully</p>
         </div>
       </div>
 
@@ -135,10 +138,11 @@ function ProductForm() {
         >
           <option>Select category ...</option>
           <option>All</option>
-          <option value="Wine">Wine</option>
-          <option value="Vodka">Vodka</option>
-          <option value="Congac">Congac</option>
-          <option value="Rum">Rum</option>
+          {categoryData?.map((item, index) => (
+            <option key={index} value={item.category}>
+              {item.category}
+            </option>
+          ))}
         </Form.Select>
 
         <Button type="submit">Add Product</Button>

@@ -1,7 +1,7 @@
 import { baseQuery } from "./api";
 
 export const CategoryApi = baseQuery.injectEndpoints({
-  tagTypes: ["CategoryApi"],
+  tagTypes: ["Category"],
   endpoints: (builder) => ({
     getCategory: builder.query({
       query: () => ({
@@ -10,7 +10,7 @@ export const CategoryApi = baseQuery.injectEndpoints({
           Accept: "application/json",
         },
       }),
-      providesTags: ["CategoryApi"],
+      providesTags: ["Category"],
     }),
     addCategory: builder.mutation({
       query: (categories) => ({

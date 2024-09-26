@@ -4,12 +4,10 @@ import { IoIosCloseCircle } from "react-icons/io";
 import ProductForm from "./ProductForm";
 import ProductTable from "./ProductTable";
 
-
 function DashboardProductBody() {
-
   return (
     <>
-    <div id="customAlert" className="modal">
+      <div id="customAlert" className="modal">
         <div className="modal-content">
           <span className="close">
             <IoIosCloseCircle />
@@ -28,14 +26,12 @@ function DashboardProductBody() {
             </div>
             <div className="col-3 p-0 form_border_product d-flex justify-content-center">
               <div className="product_form">
-                <ProductForm
-                
-                />
+                <ProductForm />
               </div>
             </div>
           </div>
         </div>
-      </section> 
+      </section>
     </>
   );
 }
