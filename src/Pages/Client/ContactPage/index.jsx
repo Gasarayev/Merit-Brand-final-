@@ -14,8 +14,9 @@ export const ContactPage = () => {
     <>
       <NavbarMenu />
       <ContactPageForm/>
-      <ContactPageMap/>
       <Contact/>
+      <ContactPageMap/>
+     
       <Footer />
     </>
   );

@@ -1,12 +1,19 @@
-.product-details{
+.product-details {
     margin: 50px 0;
 }
 
-.product-details_image{
-    display: flex;
-    justify-content: center;
+.vodka_text {
+    color: #fff;
 }
 
-.vodka_text{
-    color: #fff;
+.product-details_image {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px; 
+}
+
+.product-details_image img {
+    transition: transform 0.3s ease; 
+    transform-origin: center; 
 }

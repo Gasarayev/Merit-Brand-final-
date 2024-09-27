@@ -20,16 +20,18 @@ function NavbarMenu() {
       className="pe-2 ps-2"
     >
       <div className="logo logo_desktop">
-       
+        <Nav.Link as={Link} to="/">
           <img src={Logo} alt="logo" />
-       
+        </Nav.Link>
       </div>
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Container className="mobile_version d-flex justify-content-between align-center">
           <div className="logo logo_mobile">
+          <Nav.Link as={Link} to="/">
             <img src={Logo} alt="logo" />
+            </Nav.Link>
           </div>
           <Nav className="mobile_menu_list gap-3">
             <Nav.Link as={Link} to="/" className="menu_items">
@@ -38,9 +40,13 @@ function NavbarMenu() {
             <Nav.Link as={Link} to="/about-merit-brand" className="menu_items">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="/product" className="menu_items">Product</Nav.Link>
+            <Nav.Link as={Link} to="/product" className="menu_items">
+              Product
+            </Nav.Link>
 
-            <Nav.Link as={Link} to={"/contact-us"} className="menu_items">Contact</Nav.Link>
+            <Nav.Link as={Link} to={"/contact-us"} className="menu_items">
+              Contact
+            </Nav.Link>
 
             <NavDropdown
               className="lang_mobile"

@@ -1,5 +1,4 @@
 .meritBrandSlide {
-  background-image: url(../../../assets/img/heading_bg_img.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +21,6 @@
 }
 
 .wineAze{
-  background-image: url(../../../assets/img/sliderImg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,10 +31,6 @@
   overflow: hidden;
 }
 
-.wineAzeSunshine{
-  background-image: url(../../../assets/img/sliderImg2.png);
-
-}
 
 .head_content {
   position: relative;

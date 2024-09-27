@@ -5,7 +5,7 @@ export const SliderApi = baseQuery.injectEndpoints({
   endpoints: (builder) => ({
     getSlider: builder.query({
       query: () => ({
-        url: "/api/slider",
+        url: "/api/images",
         headers: {
           Accept: "application/json",
         },
@@ -14,7 +14,7 @@ export const SliderApi = baseQuery.injectEndpoints({
     }),
     addSlider: builder.mutation({
       query: (slider) => ({
-        url: `/api/slider`,
+        url: `/api/images`,
         method: "POST",
         body: slider,
       }),
@@ -22,7 +22,7 @@ export const SliderApi = baseQuery.injectEndpoints({
     }),
     deleteSlider: builder.mutation({
       query: (sliderNumber) => ({
-        url: `/api/slider/${sliderNumber}`,
+        url: `/api/images/${sliderNumber}`,
         method: "DELETE",
         headers: {
           Accept: "application/json",

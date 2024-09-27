@@ -76,7 +76,7 @@ function ProductDetailsComment({ productId }) {
               </div>
             ))
           ) : (
-            <div>No comments yet.</div>
+            <div className="vodka_desc">No comments yet.</div>
           )}
         </div>
       </div>
