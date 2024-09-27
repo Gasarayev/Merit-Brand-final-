@@ -1,0 +1,36 @@
+.custom-textarea {
+    background-color: #131313;
+    color: #fff; 
+  }
+  
+  .custom-textarea:focus {
+    
+    outline: none;
+    background-color: #131313e0;
+    border-color:#131313;
+    color: #fff;
+  }
+  
+  .custom-textarea::placeholder {
+    color: #ffffff97;
+    font-weight: 100;
+
+  }
+
+  .comments-list{
+    margin-top: 20px;
+  }
+
+  .comments-list .vodka_title{
+    font-weight: 700;
+  }
+
+ .comments-list .comment-item{
+    width: 100%;
+    margin: 10px 0;
+ }
+
+ .comments-list .comment-item_name{
+    border-bottom: 1px solid #131313a7;
+    padding-bottom: 5px;
+ }

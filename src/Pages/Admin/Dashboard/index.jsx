@@ -8,6 +8,7 @@ import "../../../Components/Admin/DashboardSidebar/style.css";
 import About from "../../../Components/Admin/DashboardSidebar/About";
 import Contact from "../../../Components/Admin/DashboardSidebar/Contact";
 import DashboardSlider from "../../../Components/Admin/DashboardSidebar/Slider";
+import Analithing from "../../../Components/Admin/DashboardSidebar/Analithing";
 
 function Dashboard() {
   return (
@@ -27,6 +28,7 @@ function Dashboard() {
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
               <Route path="slider" element={<DashboardSlider />} />
+              <Route path="analithing" element={<Analithing />} />
             </Routes>
           </div>
         </div>

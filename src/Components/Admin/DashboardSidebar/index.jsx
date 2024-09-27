@@ -34,6 +34,11 @@ function DashboradSidebar() {
                     <p>Slider</p>
                   </Link>
                 </div>
+                <div className="sidebar_category">
+                  <Link to="/admin/dashboard/analithing">
+                    <p>Analithing</p>
+                  </Link>
+                </div>
               </div>
             </div>
        

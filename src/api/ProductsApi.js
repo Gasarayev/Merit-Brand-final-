@@ -37,7 +37,7 @@ export const ProductsApi = baseQuery.injectEndpoints({
         headers: {
           "Content-Type": "application/json",
         },
-        body: student,
+        body: product,
       }),
       invalidatesTags: ["Products"],
     }),

@@ -1,0 +1,12 @@
+.product-details{
+    margin: 50px 0;
+}
+
+.product-details_image{
+    display: flex;
+    justify-content: center;
+}
+
+.vodka_text{
+    color: #fff;
+}

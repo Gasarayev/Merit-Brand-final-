@@ -49,9 +49,9 @@ function CategoryForm() {
   const addCategory = async (e) =>{
     e.preventDefault();
 
-    // const randomId = Math.floor(Math.random() * 100);
+    const randomId = Math.floor(Math.random() * 100);
     const addData = {
-      // id: randomId,
+      id: randomId,
       category,
     };
     try{
