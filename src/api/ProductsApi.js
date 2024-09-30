@@ -32,7 +32,7 @@ export const ProductsApi = baseQuery.injectEndpoints({
     }),
     editProducts: builder.mutation({
       query: (product) => ({
-        url: `/api/product/${product.number}`,
+        url: `/api/products/${product.id}`,
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

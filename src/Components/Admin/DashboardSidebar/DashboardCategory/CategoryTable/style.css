@@ -1,0 +1,11 @@
+.modal-dialog{
+    top: 100px !important;
+}
+
+.modal-body{
+    margin: 30px 0;
+}
+
+.btn-close{
+    background-color: #A3D5E1;
+}

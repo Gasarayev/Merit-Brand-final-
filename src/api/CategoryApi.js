@@ -32,7 +32,7 @@ export const CategoryApi = baseQuery.injectEndpoints({
     }),
     editCategory: builder.mutation({
       query: (categories) => ({
-        url: `/api/categories/${categories.number}`,
+        url: `/api/categories/${categories.id}`,
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
