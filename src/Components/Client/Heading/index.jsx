@@ -12,12 +12,12 @@ import { useGetSliderQuery } from "../../../api/SliderApi";
 function Header() {
   const { data: sliderImage, isLoading, error } = useGetSliderQuery();
   console.log(sliderImage);
-  // Yüklənmə zamanı mesaj
+
   if (isLoading) {
     return <div>Yüklənir...</div>;
   }
 
-  // Hata mesajı
+
   if (error) {
     console.error("Error fetching slider images:", error);
     return <div>Xəta baş verdi! Şəkilləri yükləyə bilmirik.</div>;
@@ -53,10 +53,10 @@ function Header() {
                           </div>
                         )}
                         {index === 0 && (
-                          <p className="content_text">
+                          <div className="content_text">
                             <h1>“Merit Brand” MMC</h1> Ən son avadanlıq növləri
                             ilə təchiz olunmuş müasir istehsalat müəssisəsidir.
-                          </p>
+                          </div>
                         )}
                       </div>
                     </div>

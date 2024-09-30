@@ -35,7 +35,7 @@ function ContactPageForm() {
           <div className="row">
             <div className="form_parent">
                 <div className="footer_contact">
-                <h2>Send Email</h2>
+                <h1>Contact with Merit Brand</h1>
                 </div>
                
               <Form ref={form} onSubmit={sendEmail}>

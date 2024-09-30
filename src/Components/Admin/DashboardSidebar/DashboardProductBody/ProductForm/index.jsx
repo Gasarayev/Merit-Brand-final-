@@ -11,7 +11,7 @@ function ProductForm() {
   console.log(categoryData);
 
   const [name, setName] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
 
@@ -56,27 +56,22 @@ function ProductForm() {
 
     const randomId = Math.floor(Math.random() * 100);
 
-    const addProductData = {
-      id: randomId,
-      name,
-      image,
-      text,
-      category,
-    };
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("id", randomId);
+    formData.append("image", image);
+    formData.append("text", text);
+    formData.append("category", category);
 
     try {
-      if (
-        addProductData.name &&
-        addProductData.image &&
-        addProductData.text &&
-        addProductData.category
-      ) {
-        const response = await addData(addProductData).unwrap();
+      if (name && image && text && category) {
+        const response = await addData(formData).unwrap();
         console.log("Response from addData:", response);
         showCustomAler();
       } else {
         showCustomAlertEmptyInp();
       }
+
 
       setName("");
       setImage(null);

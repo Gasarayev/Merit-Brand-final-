@@ -49,7 +49,7 @@ function ProductItem() {
                 return (
                   <div key={i} className="product_card">
                     <div className="product_img">
-                      <img src={ProductImg} alt="merit-brand-product" />
+                      <img src={item.image} alt="merit-brand-product" />
                     </div>
                     <div className="product_info">
                       <p className="product_company">{item?.category}</p>

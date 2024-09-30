@@ -57,7 +57,6 @@ function CategoryForm() {
     try{
       if( addData.category){
           const response = await addCategoryData(addData).unwrap();
-          // console.log("response from addCategory", response);
           console.log("form id ",addData.id)
 
           showCustomAler();

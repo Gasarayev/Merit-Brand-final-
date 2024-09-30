@@ -14,15 +14,15 @@ export const SliderApi = baseQuery.injectEndpoints({
     }),
     addSlider: builder.mutation({
       query: (slider) => ({
-        url: `/api/images`,
+        url: `/api/images/upload`,
         method: "POST",
         body: slider,
       }),
       invalidatesTags: ["Slider"],
     }),
     deleteSlider: builder.mutation({
-      query: (sliderNumber) => ({
-        url: `/api/images/${sliderNumber}`,
+      query: (filename) => ({
+        url: `/api/images/${filename}`,
         method: "DELETE",
         headers: {
           Accept: "application/json",

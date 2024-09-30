@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../ProductDeatilsInfo/style.css";
 import { useParams } from "react-router-dom";
 import { useGetProductsQuery } from "../../../api/ProductsApi";
-import ProductImg from "../../../assets/img/productImg.png";
 import ProductDetailsComment from "../ProductDetailsComment";
 
 function ProductDetailsInfo() {
@@ -12,6 +11,10 @@ function ProductDetailsInfo() {
   const product = data?.find((item) => item.id === parseInt(id));
   
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const handleMouseMove = (event) => {
     const { clientX, clientY, target } = event;
@@ -44,7 +47,8 @@ function ProductDetailsInfo() {
                 onMouseLeave={handleMouseLeave}
               >
                 <img 
-                  src={ProductImg} 
+                className="productDetailsImg"
+                  src={product.image} 
                   alt={product.name} 
                   style={{
                     transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
@@ -52,7 +56,7 @@ function ProductDetailsInfo() {
                 />
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 productDet_mobile">
               <div className="product-details_info">
                 <h2 className="vodka_title">{product.name}</h2>
                 <p className="vodka_desc">{product.category}</p>

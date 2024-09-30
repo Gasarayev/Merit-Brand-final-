@@ -9,41 +9,48 @@ import { IoIosCloseCircle } from "react-icons/io";
 
 function SliderTable() {
   const { data } = useGetSliderQuery();
-  const [deleteData] = useDeleteSliderMutation();
-  const [showModal, setShowModal] = useState(false); // Modal durumu için state
-  const [deletedSliderId, setDeletedSliderId] = useState(null); // Silinecek slider ID'si
+  const [removeSliderImg] = useDeleteSliderMutation();
 
-  const handleDeleteClick = (sliderId) => {
-    setDeletedSliderId(sliderId);
-    setShowModal(true);
+  const deleteshowCustomAlert = () => {
+    const modal = document.getElementById("customAlertdelete");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "block";
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
   };
 
-  const confirmDelete = async () => {
-    if (deletedSliderId) {
-      try {
-        const response = await deleteData(deletedSliderId).unwrap();
-        console.log("Deleted slider image:", response);
-        setShowModal(false); // Modalı kapat
-      } catch (err) {
-        console.error("Error deleting slider image:", err);
-        alert("Error! Slider image not deleted");
-      }
+  const deleteImg = async (filename) => {
+    try {
+      const response = await removeSliderImg(filename).unwrap();
+      deleteshowCustomAlert();
+      console.log("delete image", filename);
+    } catch (err) {
+      console("error! image silinmedi");
     }
   };
 
+
   return (
     <>
-      {showModal && (
-        <div id="customAlertdelete" className="modal">
-          <div className="modal-content modal-content-delete">
-            <span className="close" onClick={() => setShowModal(false)}>
-              <IoIosCloseCircle />
-            </span>
-            <p>Data deleted successfully</p>
-            <button onClick={confirmDelete}>Confirm Delete</button>
-          </div>
+      
+      <div id="customAlertdelete" className="modal">
+        <div className="modal-content modal-content-delete">
+          <span className="close">
+            <IoIosCloseCircle />
+          </span>
+          <p>Data deleted successfully</p>
         </div>
-      )}
+      </div>
+    
       <Table bordered hover>
         <thead>
           <tr>
@@ -59,7 +66,8 @@ function SliderTable() {
               <td className="pt-5 pb-5">
                 {items.img !== "No img" ? (
                   <img
-                  src={`http://localhost:3009/uploads/${items.filename}`}                    alt="about section pics"
+                    src={`http://localhost:3009/uploads/${items.filename}`}
+                    alt="about section pics"
                     style={{ width: "600px", height: "400px" }}
                   />
                 ) : (
@@ -68,7 +76,10 @@ function SliderTable() {
               </td>
               <td>
                 <div className="btn_product_ctgry">
-                  <button className="btn_product btn_product_remove" onClick={() => handleDeleteClick(items.id)}>
+                  <button
+                    className="btn_product btn_product_remove"
+                    onClick={() => deleteImg(items.filename)}
+                  >
                     <IoTrashOutline />
                   </button>
                 </div>

@@ -4,7 +4,6 @@ import { FaRegEdit } from "react-icons/fa";
 import { IoTrashOutline } from "react-icons/io5";
 import {
   useDeleteProductsMutation,
-  useEditProductsMutation,
   useGetProductsQuery,
 } from "../../../../../api/ProductsApi";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -14,8 +13,6 @@ function ProductTable() {
   const { data } = useGetProductsQuery();
 
   const [removeData] = useDeleteProductsMutation();
-
-  // const [editData] = useEditProductsMutation();
 
   const deleteshowCustomAlert = () => {
     const modal = document.getElementById("customAlertdelete");
@@ -72,12 +69,13 @@ function ProductTable() {
           {data?.map((products, index) => {
             return (
               <tr key={index}>
+                {console.log(products.image)}
                 <td>{products?.id}</td>
                 <td>{products?.name}</td>
                 <td>
                   {products?.image !== "No img" ? (
                     <img
-                      src={products?.image}
+                      src={`${products.image}`}
                       alt={products?.name}
                       style={{ width: "100px", height: "100px" }}
                     />

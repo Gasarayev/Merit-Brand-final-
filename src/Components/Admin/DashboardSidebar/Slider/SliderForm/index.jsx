@@ -44,32 +44,27 @@ function SliderForm() {
   };
 
 
-  const addSliderImg = async (e) =>{
-      e.preventDefault();
-
-      const randomId = Math.floor(Math.random() * 100);
-
-      const addImg = {
-        id: randomId,
-        image,
+  const addSliderImg = async (e) => {
+    e.preventDefault();
+  
+    const formData = new FormData();
+    formData.append("sliderImage", image);
+  
+    try {
+      if (image) {
+        const response = await addSliderData(formData).unwrap(); 
+        console.log("Response from add slider Img", response);
+        showCustomAler();
+      } else {
+        showCustomAlertEmptyInp();
       }
-
-      try{
-        if(addImg.image){
-          const response = await addSliderData(addImg).unwrap();
-          console.log("Response from add slider Img", response);
-          showCustomAler();
-        }else{
-          showCustomAlertEmptyInp();
-
-        }
-
-        setImage("");
-      }catch(err){
-        console.error("Error: ", err);
-        alert("error");
-      }
-  }
+  
+      setImage("");
+    } catch (err) {
+      console.error("Error: ", err);
+      alert("Upload failed: " + err.message);
+    }
+  };
 
 
 
