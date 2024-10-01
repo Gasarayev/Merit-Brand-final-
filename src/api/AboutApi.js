@@ -32,7 +32,7 @@ export const AboutApi = baseQuery.injectEndpoints({
     }),
     editAbout: builder.mutation({
       query: (about) => ({
-        url: `/api/about/${about.number}`,
+        url: `/api/about/${about.id}`,
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

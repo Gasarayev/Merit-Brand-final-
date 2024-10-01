@@ -1,38 +1,42 @@
 import React from "react";
-import VodkaProsses from "../../../assets/img/vodka_prosses.png";
-import WineProsses from "../../../assets/img/wine_prosses.png";
+// import VodkaProsses from "../../../assets/img/vodka_prosses.png";
+// import WineProsses from "../../../assets/img/wine_prosses.png";
 
 import "../AboutSection/style.css";
+import { useGetAboutQuery } from "../../../api/AboutApi";
 
 function AboutSection() {
+  const { data } = useGetAboutQuery();
+  console.log(data);
+
   return (
     <>
       <section className="about_section">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6 m-0 p-0">
-              <div className="vodka_img about_sect_img">
-                <img src={VodkaProsses} alt="merit brand prosses" />
-              </div>
-            </div>
-            <div className="col-lg-6 m-0 p-0">
-              <div className="vodka_content about_sect_content">
-      
-                <h2 className="vodka_title_abt">How we Started</h2>
-                <p className="vodka_text">
-                  Merit Brand plant, Republic of Azerbaijan in 2007Shabran
-                  settlement, at the foot of the Great Caucasus Mountains and
-                  the Caspian Seain the territory of the village of Uzun Boyat,
-                  located on the coast of the seasearched. Because his place of
-                  residence was not chosen by chancenature is fertile for
-                  winemaking in this regionsoil and very favorable climatic
-                  conditions like seedshad done
-                </p>
-              </div>
-            </div>
-          </div>
+          {data?.map((item, index) => {
+            const rowClass = index % 2 === 1 ? "flex-row-reverse" : ""; // 1, 3, 5... index üçün flex-row-reverse
 
-          <div className="row flex-row-reverse">
+            return (
+              <div key={index} className={`row ${rowClass}`}>
+                <div className="col-lg-6 m-0 p-0">
+                  <div className="vodka_img about_sect_img">
+                    <img src={item.image} alt="merit brand prosses" />
+                  </div>
+                </div>
+                <div className="col-lg-6 m-0 p-0">
+                  <div className="vodka_content about_sect_content">
+                    <h2 className="vodka_title_abt">{item.name}</h2>
+                    <p className="vodka_text">
+                      {item.description}
+                      {console.log(item.description)}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* <div className="row flex-row-reverse">
             <div className="col-lg-6 m-0 p-0">
               <div className="vodka_img about_sect_img">
                 <img src={WineProsses} alt="merit brand prosses" />
@@ -56,7 +60,7 @@ function AboutSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

@@ -9,8 +9,10 @@ function AboutForm() {
   const [aboutData] = useAddAboutMutation();
   console.log(aboutData);
 
+  const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
+
 
   const showCustomAler = () => {
     const modal = document.getElementById("customAlertForm");
@@ -51,15 +53,16 @@ function AboutForm() {
 
     const randomId = Math.floor(Math.random() * 100);
 
-    const addAboutData = {
-      id: randomId,
-      image,
-      description,
-    };
+    const formData = new FormData();
+    formData.append("id", randomId);
+    formData.append("name", name);
+    formData.append("image", image);
+    formData.append("description", description);
+
 
     try {
-      if (addAboutData.image && addAboutData.description) {
-        const response = await aboutData(addAboutData).unwrap();
+      if (image && description && name) {
+        const response = await aboutData(formData).unwrap();
         console.log("response from about data", response);
         showCustomAler();
       } else {
@@ -68,6 +71,7 @@ function AboutForm() {
       }
 
       setImage(null);
+      setName("")
       setDescription("")
     } catch (err) {
       console.log("about data error", err);
@@ -96,6 +100,18 @@ function AboutForm() {
       </div>
 
       <Form onSubmit={addAbout}>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>About content</Form.Label>
+          <Form.Control
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text-area"
+            placeholder="About content"
+          />
+        </Form.Group>
+
+
         <Form.Group controlId="formFile" className="mb-3">
           <Form.Label>About Image</Form.Label>
           <Form.Control

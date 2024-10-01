@@ -1,6 +1,8 @@
 import React from "react";
 import "../Contact/style.css";
+import { useGetContactQuery } from "../../../api/ContactApi";
 function Contact() {
+  const { data } = useGetContactQuery();
   return (
     <>
       <section>
@@ -13,26 +15,29 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-6 d-flex justify-content-center">
-              <div className="contact_adress">
-                <h3>Adress</h3>
-                <p>
-                  Office Ziya Bunyadov ave., 43M Baku, Azerbaijan AZ1108 Factory
-                  Uzun Boyat village Shabran, Azerbaijan AZ1700
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 d-flex justify-content-center">
-                <div className="contact_info">
-                    <h3>Contact</h3>
-                    <p>+994 123 456 789</p>
-                    <p>+994 123 456 789</p>
-                    <p>Email: <span>gasarayev.emil@gmail.com</span></p>
+          {data?.map((item, index) => {
+            return (
+              <div className="row" key={index}>
+                <div className="col-md-6 d-flex justify-content-center">
+                  <div className="contact_adress">
+                    <h3>Adress</h3>
+                    <p>{item.addres}</p>
+                  </div>
                 </div>
-            </div>
-          </div>
+
+                <div className="col-md-6 d-flex justify-content-center">
+                  <div className="contact_info">
+                    <h3>Contact</h3>
+                    <p> {item.number} </p>
+                    <p> {item.number1} </p>
+                    <p>
+                      Email: <span> {item.email} </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

@@ -32,7 +32,7 @@ export const ContactApi = baseQuery.injectEndpoints({
     }),
     editContact: builder.mutation({
       query: (contact) => ({
-        url: `/api/contacts/${contact.number}`,
+        url: `/api/contacts/${contact.id}`,
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
