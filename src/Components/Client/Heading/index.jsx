@@ -8,10 +8,13 @@ import "swiper/css/pagination";
 
 import { Navigation, Pagination } from "swiper/modules";
 import { useGetSliderQuery } from "../../../api/SliderApi";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation();
+
+  
   const { data: sliderImage, isLoading, error } = useGetSliderQuery();
-  console.log(sliderImage);
 
   if (isLoading) {
     return <div>Yüklənir...</div>;
@@ -22,6 +25,8 @@ function Header() {
     console.error("Error fetching slider images:", error);
     return <div>Xəta baş verdi! Şəkilləri yükləyə bilmirik.</div>;
   }
+
+  
 
   return (
     <section className="heading">
@@ -44,7 +49,6 @@ function Header() {
                       backgroundImage: `url(http://localhost:3009/uploads/${item.filename})`,
                     }}
                   >
-                    {console.log(item.filename)}
                     <div className="container">
                       <div className="row d-flex flex-column">
                         {index === 0 && (
@@ -54,8 +58,7 @@ function Header() {
                         )}
                         {index === 0 && (
                           <div className="content_text">
-                            <h1>“Merit Brand” MMC</h1> Ən son avadanlıq növləri
-                            ilə təchiz olunmuş müasir istehsalat müəssisəsidir.
+                            <h1>“Merit Brand” MMC</h1> {t("heading-text")}
                           </div>
                         )}
                       </div>

@@ -2,8 +2,11 @@ import React from "react";
 import "../VodkaSection/style.css";
 import Vodka from "../../../assets/img/vodka.png";
 import WineVodka from "../../../assets/img/vodka_wine.png";
+import { useTranslation } from "react-i18next";
 
 function VodkaSection() {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="vodka_section">
@@ -16,16 +19,10 @@ function VodkaSection() {
             </div>
             <div className="col-lg-5">
               <div className="vodka_content">
-                <p className="vodka_desc">Yes, We do excellent alcohol.</p>
-                <h2 className="vodka_title">The Reds</h2>
-                <p className="vodka_text">
-                  Made from grape Cabernet Sauvignon & Merlot which is
-                  cultivated in a region of Shabran. Wine is violet-red color
-                  with smooth fruit aroma with notes of black currant.
-                  Recommended to serve red meat, salads & cheese. Flow
-                  temperature 14°-16
-                </p>
-                <button className="vodka_btn">shop now</button>
+                <p className="vodka_desc"> {t("vodka_sect_desc")}</p>
+                <h2 className="vodka_title">{t("vodka_sect_titleTwo")}</h2>
+                <p className="vodka_text">{t("lido1")}</p>
+                <button className="vodka_btn">{t("vodka_sect_btn")}</button>
               </div>
             </div>
           </div>
@@ -38,16 +35,10 @@ function VodkaSection() {
             </div>
             <div className="col-lg-5 d-flex justify-content-end">
               <div className="vodka_content vodka_content_wine">
-                <p className="vodka_desc">Yes, We do excellent alcohol.</p>
-                <h2 className="vodka_title">The Whites</h2>
-                <p className="vodka_text">
-                  The company Merit Brand LTD is engaged in the production of
-                  red, white, dry, semi-sweet, sweet wines, vodka, whiskey and
-                  cognac. Today, the range of products covers both the local
-                  market and the international one. The company exports wines to
-                  the Russian Federation and China.
-                </p>
-                <button className="vodka_btn">shop now</button>
+                <p className="vodka_desc">{t("vodka_sect_desc")}</p>
+                <h2 className="vodka_title">{t("vodka_sect_titleOne")}</h2>
+                <p className="vodka_text">{t("lido1")}</p>
+                <button className="vodka_btn">{t("vodka_sect_btn")}</button>
               </div>
             </div>
           </div>

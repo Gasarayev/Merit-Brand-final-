@@ -1,5 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './i18n';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductDetails from "./Pages/Client/ProductDetal/index.jsx";
 import ProductPage from "./Pages/Client/ProductPage/index.jsx";
@@ -9,6 +10,7 @@ import LoginPage from "./Pages/Admin/LoginPage/index.jsx";
 import Dashboard from "./Pages/Admin/Dashboard/index.jsx";
 import PrivateRouter from "./router/PrivateRouter/index.jsx";
 import { ContactPage } from "./Pages/Client/ContactPage/index.jsx";
+
 
 function App() {
   return (

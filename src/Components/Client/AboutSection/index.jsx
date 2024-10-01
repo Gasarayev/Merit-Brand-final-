@@ -4,8 +4,11 @@ import React from "react";
 
 import "../AboutSection/style.css";
 import { useGetAboutQuery } from "../../../api/AboutApi";
+import { useTranslation } from "react-i18next";
 
 function AboutSection() {
+  const {t} = useTranslation();
+
   const { data } = useGetAboutQuery();
   console.log(data);
 
@@ -28,7 +31,7 @@ function AboutSection() {
                     <h2 className="vodka_title_abt">{item.name}</h2>
                     <p className="vodka_text">
                       {item.description}
-                      {console.log(item.description)}
+                     
                     </p>
                   </div>
                 </div>

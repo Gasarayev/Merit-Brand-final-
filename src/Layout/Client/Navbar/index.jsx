@@ -5,11 +5,21 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import "../Navbar/style.css";
 import Logo from "../../../assets/img/logoNavbar.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+import "../Navbar/style.css";
 
 function NavbarMenu() {
+  const { t } = useTranslation();
+  
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+};
+
+
   return (
     <Navbar
       collapseOnSelect
@@ -34,39 +44,40 @@ function NavbarMenu() {
           </div>
           <Nav className="mobile_menu_list gap-3">
             <Nav.Link as={Link} to="/" className="menu_items">
-              Home
+            {t("homepage")}
             </Nav.Link>
             <Nav.Link as={Link} to="/about-merit-brand" className="menu_items">
-              About
+            {t("about")}
             </Nav.Link>
             <Nav.Link as={Link} to="/product" className="menu_items">
-              Product
+            {t("products")}
             </Nav.Link>
 
             <Nav.Link as={Link} to={"/contact-us"} className="menu_items">
-              Contact
+            {t("contact")}
             </Nav.Link>
 
             <NavDropdown
               className="lang_mobile"
-              title={<span className="custom-nav-title">English</span>}
+              title={<span onClick={() => changeLanguage("en")} className="custom-nav-title">English</span>}
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item>Azerbaijan</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeLanguage("az")}>Azerbaijan</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item>Russian</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeLanguage("ru")}>Russian</NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
           <Nav className="icon_mobile_version d-flex align-items-center justify-content-center">
             <NavDropdown
               className="lang_desc_version"
-              title={<span className="custom-nav-title">EN</span>}
+              
+              title={<span onClick={() => changeLanguage("en")} className="custom-nav-title">EN</span>}
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="#">AZ</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeLanguage("az")}>AZ</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#">RU</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeLanguage("ru")}>RU</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link>
               <FaInstagram />

@@ -3,8 +3,11 @@ import Wine1 from "../../../assets/img/wine1.png";
 import Wine2 from "../../../assets/img/wine2.png";
 import GrapeIcon from "../../../assets/img/wineGrapeIcon.png";
 import "../WineSection/style.css";
+import { useTranslation } from "react-i18next";
 
 function WineSection() {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="wine_sect">
@@ -21,17 +24,11 @@ function WineSection() {
                 <p className="content_desc">Red Dry Wine</p>
                 <h2 className="content_title">Mirvari</h2>
                 <p className="wine_text">
-                  Şabranda becərilən Cabernet Sauvignon & Merlot üzümündən
-                  hazırlanmışdır. Şərab qara qarağat notları ilə hamar meyvə
-                  ətirli bənövşəyi-qırmızı rəngdədir. Qırmızı ət, salat və
-                  pendirə xidmət etmək tövsiyə olunur. Axın temperaturu 14°-16°
+                {t("mirvari1")}
                 </p>
                 <p className="wine_text">
-                  Made from grape Cabernet Sauvignon & Merlot which is
-                  cultivated in a region of Shabran. Wine is violet-red color
-                  with smooth fruit aroma with notes of black currant.
-                  Recommended to serve red meat, salads & cheese. Flow
-                  temperature 14°-16°
+                {t("mirvari1")}
+
                 </p>
               </div>
             </div>
@@ -52,12 +49,7 @@ function WineSection() {
 
                 <p className="content_desc_second">Red Dry Wine</p>
                 <p className="content_text_second">
-                  Today, in our vineyards with a total area of over 150
-                  hectares, we grow various grape varieties such as Cabernet
-                  Sauvignon, Pinot Noir, Merlot, Pinot Meunier, Chardonnay,
-                  Madrasa, and Takveri. All of this provides a great opportunity
-                  for the production of different wines and the creation of
-                  interesting blends.
+                {t("aylingold1")}
                 </p>
               </div>
             </div>
