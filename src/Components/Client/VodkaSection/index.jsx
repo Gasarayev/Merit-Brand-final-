@@ -48,4 +48,4 @@ function VodkaSection() {
   );
 }
 
-export default VodkaSection;
+export default React.memo(VodkaSection);

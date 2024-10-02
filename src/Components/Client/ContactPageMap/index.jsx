@@ -24,4 +24,4 @@ function ContactPageMap() {
   );
 }
 
-export default ContactPageMap;
+export default React.memo(ContactPageMap);

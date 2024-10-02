@@ -84,4 +84,4 @@ function ProductDetailsComment({ productId }) {
   );
 }
 
-export default ProductDetailsComment;
+export default React.memo(ProductDetailsComment);

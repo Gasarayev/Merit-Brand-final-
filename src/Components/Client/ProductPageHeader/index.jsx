@@ -11,4 +11,4 @@ function ProductPageHeader() {
   );
 }
 
-export default ProductPageHeader;
+export default React.memo(ProductPageHeader);

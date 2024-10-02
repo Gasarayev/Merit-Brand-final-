@@ -74,4 +74,4 @@ function ProductDetailsInfo() {
   );
 }
 
-export default ProductDetailsInfo;
+export default React.memo(ProductDetailsInfo);

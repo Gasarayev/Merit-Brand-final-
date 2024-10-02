@@ -60,4 +60,4 @@ function WineSection() {
   );
 }
 
-export default WineSection;
+export default React.memo(WineSection);

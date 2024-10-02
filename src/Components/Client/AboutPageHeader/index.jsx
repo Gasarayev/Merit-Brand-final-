@@ -33,4 +33,4 @@ function AboutPageHeader() {
   );
 }
 
-export default AboutPageHeader;
+export default React.memo(AboutPageHeader);

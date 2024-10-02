@@ -1,5 +1,4 @@
 import React from "react";
-
 import NavbarMenu from "../../../Layout/Client/Navbar";
 import Footer from "../../../Layout/Client/Footer";
 import ContactPageForm from "../../../Components/Client/ContactPageForm";
@@ -7,13 +6,12 @@ import ContactPageMap from "../../../Components/Client/ContactPageMap";
 import Contact from "../../../Components/Client/Contact";
 import { Helmet } from "react-helmet";
 
-
 export const ContactPage = () => {
-  
+  console.log("ContactPage Component Loaded");
 
   return (
     <>
-     <Helmet>
+      <Helmet>
         <link
           rel="canonical"
           href={`http://localhost:5173/contact-us/`}
@@ -27,10 +25,9 @@ export const ContactPage = () => {
       </Helmet>
 
       <NavbarMenu />
-      <ContactPageForm/>
-      <Contact/>
-      <ContactPageMap/>
-     
+      <ContactPageForm />
+      <Contact />
+      <ContactPageMap />
       <Footer />
     </>
   );

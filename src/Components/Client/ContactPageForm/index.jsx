@@ -85,4 +85,4 @@ function ContactPageForm() {
   );
 }
 
-export default ContactPageForm;
+export default React.memo(ContactPageForm);
