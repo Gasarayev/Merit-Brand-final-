@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import "../ProductDetailsComment/style.css";
 import { useAddCommentMutation, useGetCommentQuery } from "../../../api/CommentApi";
+import "../ProductDetailsComment/style.css";
+import "../VodkaSection/style.css"
 
 function ProductDetailsComment({ productId }) {
   const [newComment, setNewComment] = useState("");

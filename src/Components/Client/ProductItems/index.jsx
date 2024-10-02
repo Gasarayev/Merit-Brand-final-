@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import ProductImg from "../../../assets/img/productImg.png";
 import { Link } from "react-router-dom";
 import { useGetProductsQuery } from "../../../api/ProductsApi";
 import "../ProductItems/style.css";
 
 function ProductItem() {
   const { data } = useGetProductsQuery();
-  console.log(data);
 
-  const uniqueCategories = data ? [...new Set(data.map((item) => item.category))] : [];
+  let uniqueCategories = [];
+  
+  if (data) {
+    uniqueCategories = Array.from(new Set(data.map((item) => item.category)));
+  }
 
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -26,7 +28,9 @@ function ProductItem() {
               <h1 className="vodka_title">Merit Brand Products</h1>
               <div className="items_category">
                 <button
-                  className="category_btn"
+                  className={`category_btn ${
+                    selectedCategory === "All" ? "active" : ""
+                  }`}
                   onClick={() => setSelectedCategory("All")}
                 >
                   All
@@ -34,7 +38,9 @@ function ProductItem() {
                 {uniqueCategories.map((category, index) => (
                   <button
                     key={index}
-                    className="category_btn"
+                    className={`category_btn ${
+                      selectedCategory === category ? "active" : ""
+                    }`}
                     onClick={() => setSelectedCategory(category)}
                   >
                     {category}
@@ -53,7 +59,10 @@ function ProductItem() {
                     </div>
                     <div className="product_info">
                       <p className="product_company">{item?.category}</p>
-                      <Link to={`/product-details/${item.id}`} className="product_name">
+                      <Link
+                        to={`/product-details/${item.id}`}
+                        className="product_name"
+                      >
                         <h2>{item?.name}</h2>
                       </Link>
                       <h3 className="product_sort">{item?.name1}</h3>

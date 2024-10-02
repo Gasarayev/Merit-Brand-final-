@@ -3,8 +3,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import emailjs from "@emailjs/browser";
 import "../ContactPageForm/style.css";
+import { useTranslation } from "react-i18next";
 
 function ContactPageForm() {
+  const { t } = useTranslation();
+
   const form = useRef();
   const [message, setMessage] = useState("");
 
@@ -30,12 +33,12 @@ function ContactPageForm() {
   };
   return (
     <>
-      <section className="contact_form">
+      <section className="contact_form marginForNavbar">
         <div className="container">
           <div className="row">
             <div className="form_parent">
                 <div className="footer_contact">
-                <h1>Contact with Merit Brand</h1>
+                <h1>{t("contactForm")}</h1>
                 </div>
                
               <Form ref={form} onSubmit={sendEmail}>
@@ -44,7 +47,7 @@ function ContactPageForm() {
                   <Form.Control
                     type="text"
                     name="user_name"
-                    placeholder="Enter your name..."
+                    placeholder={t("contactName")}
                   />
                 </Form.Group>
 
@@ -52,7 +55,7 @@ function ContactPageForm() {
                  
                   <Form.Control
                     type="email"
-                    placeholder="Enter your email..."
+                    placeholder={t("contactEmail")}
                     name="user_email"
                   />
                 </Form.Group>
@@ -62,12 +65,12 @@ function ContactPageForm() {
                   <Form.Control
                     as="textarea"
                     name="message"
-                    placeholder="Enter your message..."
+                    placeholder={t("contactMessage")}
                   />
                 </Form.Group>
 
                 <Button variant="light" type="submit">
-                  Submit
+                {t("contactBtn")}
                 </Button>
 
               </Form>

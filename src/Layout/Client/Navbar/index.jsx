@@ -21,12 +21,13 @@ function NavbarMenu() {
 
 
   return (
+
     <Navbar
       collapseOnSelect
       expand="lg"
       bg="dark"
       variant="dark"
-      className="pe-2 ps-2"
+      className="pe-2 ps-2 positionNavbarFix"
     >
       <div className="logo logo_desktop">
         <Nav.Link as={Link} to="/">
@@ -79,10 +80,10 @@ function NavbarMenu() {
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={() => changeLanguage("ru")}>RU</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link>
+            <Nav.Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </Nav.Link>
           </Nav>

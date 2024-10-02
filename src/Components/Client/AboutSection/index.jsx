@@ -1,7 +1,8 @@
 import React from "react";
-import "../AboutSection/style.css";
 import { useGetAboutQuery } from "../../../api/AboutApi";
 import { useTranslation } from "react-i18next";
+import "../VodkaSection/style.css"
+import "../AboutSection/style.css";
 
 function AboutSection() {
   const {t} = useTranslation();

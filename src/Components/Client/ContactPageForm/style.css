@@ -1,9 +1,12 @@
+.marginForNavbar{
+    margin-top: 100px;
+}
+
 .form_parent{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* width: 600px; */
 }
 
 .form_parent input{

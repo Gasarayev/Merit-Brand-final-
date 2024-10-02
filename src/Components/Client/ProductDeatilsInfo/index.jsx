@@ -36,7 +36,7 @@ function ProductDetailsInfo() {
   };
 
   return (
-    <div className="container">
+    <div className="container marginForNavbar">
       <div className="product-details">
         {product ? (
           <div className="row m-0 p-0">
