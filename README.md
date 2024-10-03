@@ -1,3 +1,3 @@
-<h1>Merit Brand</h1>
+# Merit Brand
 
 Backend (Node.JS) - https://github.com/Gasarayev/MeritBrand-Node.js
