@@ -58,8 +58,8 @@ function ProductDetailsInfo() {
             </div>
             <div className="col-md-6 productDet_mobile">
               <div className="product-details_info">
-                <h2 className="vodka_title">{product.name}</h2>
-                <p className="vodka_desc">{product.category}</p>
+                <h1 className="vodka_title">{product.name}</h1>
+                <h2 className="vodka_desc">{product.category}</h2>
                 <p className="vodka_text">{product.text}</p>
               </div>
             </div>

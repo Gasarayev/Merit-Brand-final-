@@ -14,7 +14,7 @@ export const ContactPage = () => {
       <Helmet>
         <link
           rel="canonical"
-          href={`http://localhost:5173/contact-us/`}
+          href={`http://localhost:5173/contact-us`}
         />
         <meta
           name="description"

@@ -66,7 +66,7 @@ function ProductDetailsComment({ productId }) {
         </div>
 
         <div className="comments-list">
-          <h5 className="vodka_title">Comments</h5>
+          <h2 className="vodka_title">Comments</h2>
           {filteredComments.length > 0 ? (
             filteredComments.map((comment, index) => (
               <div key={index} className="comment-item vodka_text">

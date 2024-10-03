@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /Admin/                  
+Disallow: /PrivateRouter/        
+Disallow: /redux/          
+Disallow: /api/            
+
+Allow: /public/ 
+
+Sitemap: http://localhost:5173/sitemap.xml

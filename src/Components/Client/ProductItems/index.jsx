@@ -65,7 +65,7 @@ function ProductItem() {
                       >
                         <h2>{item?.name}</h2>
                       </Link>
-                      <h3 className="product_sort">{item?.name1}</h3>
+                     
                     </div>
                   </div>
                 );
